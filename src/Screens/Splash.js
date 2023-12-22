@@ -15,7 +15,7 @@ const Splash = () => {
       const mEmail = await AsyncStorage.getItem('EMAIL');
       const mPassword = await AsyncStorage.getItem('PASSWORD');
       if(mEmail !== '' || mEmail !== null || mEmail !== undefined){
-        navigation.navigate('Login');
+        navigation.navigate('Home');
       }
       else{
         navigation.navigate('Login');

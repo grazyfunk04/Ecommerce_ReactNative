@@ -15,8 +15,8 @@ const Loader = ({ modalVisible, setModalVisible }) => {
       <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
         <View
           style={{
-            width: 200, 
-            height: 200,
+            width: 100, 
+            height: 100,
             margin: 20,
             backgroundColor: "white",
             borderRadius: 20,

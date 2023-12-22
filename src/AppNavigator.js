@@ -6,6 +6,11 @@ import Splash from './Screens/Splash';
 import Login from './Screens/Login';
 import SignUp from './Screens/SignUp';
 import Home from './Screens/Home';
+import Main from './bottom/Main';
+import Search from './bottom/Search';
+import Cart from './bottom/Cart';
+import Wishlist from './bottom/Wishlist';
+import Profile from './bottom/Profile';
 const Stack = createStackNavigator();
 
 
@@ -17,6 +22,11 @@ const AppNavigator = () => {
         <Stack.Screen options= {{headerShown: false}} name="Login" component={Login} />
         <Stack.Screen options= {{headerShown: false}} name="SignUp" component={SignUp} />
         <Stack.Screen options= {{headerShown: false}} name="Home" component={Home} />
+        <Stack.Screen options= {{headerShown: false}} name="Main" component={Main} />
+        <Stack.Screen options= {{headerShown: false}} name="Search" component={Search} />
+        <Stack.Screen options= {{headerShown: false}} name="Cart" component={Cart} />
+        <Stack.Screen options= {{headerShown: false}} name="Wishlist" component={Wishlist} />
+        <Stack.Screen options= {{headerShown: false}} name="Profile" component={Profile} />
 
         </Stack.Navigator>
 
