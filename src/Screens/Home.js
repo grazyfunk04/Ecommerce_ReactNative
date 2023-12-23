@@ -6,9 +6,13 @@ import Search from "../bottom/Search";
 import Cart from "../bottom/Cart";
 import Wishlist from "../bottom/Wishlist";
 import Profile from "../bottom/Profile";
+import { useSelector } from "react-redux";
 
 const Home = () => {
-  const [selectedTab, setSelectedTab] = useState(0);
+  const [selectedTab, setSelectedTab] = useState(0);  
+
+  const data = useSelector(state => state);
+
   return (
     <View style={{ flex: 1 }}>
       {selectedTab == 0 ? (
@@ -40,13 +44,18 @@ const Home = () => {
             height: "100%",
             justifyContent: "center",
             alignItems: "center",
-          }} onPress={()=>{
+          }}
+          onPress={() => {
             setSelectedTab(0);
           }}
         >
           <Image
             source={require("../images/home.png")}
-            style={{ width: 24, height: 24, tintColor: selectedTab == 0 ? '#000':'#8e8e8e' }}
+            style={{
+              width: 24,
+              height: 24,
+              tintColor: selectedTab == 0 ? "#000" : "#8e8e8e",
+            }}
           />
         </TouchableOpacity>
         <TouchableOpacity
@@ -56,13 +65,17 @@ const Home = () => {
             justifyContent: "center",
             alignItems: "center",
           }}
-          onPress={()=>{
+          onPress={() => {
             setSelectedTab(1);
           }}
         >
           <Image
             source={require("../images/search.png")}
-            style={{ width: 24, height: 24, tintColor: selectedTab == 1 ? '#000':'#8e8e8e' }}
+            style={{
+              width: 24,
+              height: 24,
+              tintColor: selectedTab == 1 ? "#000" : "#8e8e8e",
+            }}
           />
         </TouchableOpacity>
 
@@ -78,36 +91,71 @@ const Home = () => {
             style={{
               width: 50,
               height: 50,
-              backgroundColor: selectedTab == 2 ? 'purple' : '#000',
+              backgroundColor: selectedTab == 2 ? "purple" : "#000",
               borderRadius: 25,
               alignItems: "center",
               justifyContent: "center",
             }}
-            onPress={()=>{
+            onPress={() => {
               setSelectedTab(2);
             }}
           >
             <Image
               source={require("../images/bag.png")}
-              style={{ width: 24, height: 24, tintColor: '#fff' }}
+              style={{ width: 24, height: 24, tintColor: "#fff" }}
             />
+            <View
+              style={{
+                width: 20,
+                height: 20,
+                backgroundColor: "red",
+                borderRadius: 10,
+                justifyContent: "center",
+                alignItems: "center",
+                position: 'absolute',
+                top: 5,
+                right: 5,
+              }}
+            >
+              <Text style={{color: '#fff', fontWeight: '600'}}>{data.reducers.length}</Text>
+            </View>
           </TouchableOpacity>
         </View>
 
         <TouchableOpacity
           style={{
-            width: "100%",
+            width: "120%",
             height: "100%",
             justifyContent: "center",
             alignItems: "center",
-          }} onPress={()=>{
+          }}
+          onPress={() => {
             setSelectedTab(3);
           }}
         >
           <Image
             source={require("../images/like.png")}
-            style={{ width: 24, height: 24, tintColor: selectedTab == 3 ? '#000':'#8e8e8e' }}
+            style={{
+              width: 24,
+              height: 24,
+              tintColor: selectedTab == 3 ? "#000" : "#8e8e8e",
+            }}
           />
+          <View
+              style={{
+                width: 20,
+                height: 20,
+                backgroundColor: "red",
+                borderRadius: 10,
+                justifyContent: "center",
+                alignItems: "center",
+                position: 'absolute',
+                top: 10,
+                left: 11,
+              }}
+            >
+              <Text style={{color: '#fff', fontWeight: '600'}}>{data.reducers2.length}</Text>
+            </View>
         </TouchableOpacity>
         <TouchableOpacity
           style={{
@@ -115,13 +163,18 @@ const Home = () => {
             height: "100%",
             justifyContent: "center",
             alignItems: "center",
-          }} onPress={()=>{
+          }}
+          onPress={() => {
             setSelectedTab(4);
           }}
         >
           <Image
             source={require("../images/personal.png")}
-            style={{ width: 24, height: 24, tintColor: selectedTab == 4 ? '#000':'#8e8e8e' }}
+            style={{
+              width: 24,
+              height: 24,
+              tintColor: selectedTab == 4 ? "#000" : "#8e8e8e",
+            }}
           />
         </TouchableOpacity>
       </View>
