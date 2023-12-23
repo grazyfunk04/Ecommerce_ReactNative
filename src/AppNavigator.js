@@ -11,6 +11,8 @@ import Search from './bottom/Search';
 import Cart from './bottom/Cart';
 import Wishlist from './bottom/Wishlist';
 import Profile from './bottom/Profile';
+import MyAddress from './Screens/MyAddress';
+import AddAddress from './Screens/AddAddress';
 const Stack = createStackNavigator();
 
 
@@ -27,6 +29,8 @@ const AppNavigator = () => {
         <Stack.Screen options= {{headerShown: false}} name="Cart" component={Cart} />
         <Stack.Screen options= {{headerShown: false}} name="Wishlist" component={Wishlist} />
         <Stack.Screen options= {{headerShown: false}} name="Profile" component={Profile} />
+        <Stack.Screen options= {{headerShown: false}} name="MyAddress" component={MyAddress} />
+        <Stack.Screen options= {{headerShown: false}} name="AddAddress" component={AddAddress} />
 
         </Stack.Navigator>
 
