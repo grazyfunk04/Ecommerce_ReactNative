@@ -74,6 +74,8 @@ const Profile = () => {
           borderBottomColor: "#8e8e8e",
           justifyContent: 'center',
           alignSelf: 'center'
+        }} onPress={()=>{
+          navigation.navigate('Orders');
         }}
       >
         <Text style={{marginLeft: 20}}>My Orders</Text>

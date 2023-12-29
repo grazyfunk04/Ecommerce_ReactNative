@@ -11,7 +11,8 @@ import { useSelector } from "react-redux";
 const Home = () => {
   const [selectedTab, setSelectedTab] = useState(0);  
 
-  const data = useSelector(state => state);
+  const data1 = useSelector(state => state.reducers);
+  const data2 = useSelector(state => state.reducers2);
 
   return (
     <View style={{ flex: 1 }}>
@@ -117,7 +118,7 @@ const Home = () => {
                 right: 5,
               }}
             >
-              <Text style={{color: '#fff', fontWeight: '600'}}>{data.reducers.length}</Text>
+              <Text style={{color: '#fff', fontWeight: '600'}}>{data1.length}</Text>
             </View>
           </TouchableOpacity>
         </View>
@@ -154,7 +155,7 @@ const Home = () => {
                 left: 11,
               }}
             >
-              <Text style={{color: '#fff', fontWeight: '600'}}>{data.reducers2.length}</Text>
+              <Text style={{color: '#fff', fontWeight: '600'}}>{data2.length}</Text>
             </View>
         </TouchableOpacity>
         <TouchableOpacity
